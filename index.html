@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Guía Laboratorio CSS</h1>
+    </header>
+    <section id="textos">
+        <h2>1. Textos</h2>
+        
+        <div class="example-container">
+            <div class="example-title">a. Dirección</div>
+            <p>Texto normal (dirección izquierda a derecha)</p>
+            <p class="text-direction">Texto con dirección derecha a izquierda</p>
+            <div class="code">
+                direction: rtl;
+            </div>
+        </div>
+        
+        <div class="example-container">
+            <div class="example-title">b. Flujo del texto</div>
+            <p class="text-flow">Texto con flujo vertical</p>
+            <div class="code">
+                writing-mode: vertical-rl;<br>
+                text-orientation: mixed;
+            </div>
+        </div>
+        
+        <div class="example-container">
+            <div class="example-title">c. Decoración</div>
+            <p class="text-decoration">Texto con decoración subrayado y sobrelineado ondulado azul</p>
+            <div class="code">
+                text-decoration: underline overline wavy blue;
+            </div>
+        </div>
+        
+        <div class="example-container">
+            <div class="example-title">d. Desbordamiento</div>
+            <p class="text-overflow">Este es un texto muy largo que no cabe en el contenedor y será truncado con puntos suspensivos</p>
+            <div class="code">
+                width: 200px;<br>
+                white-space: nowrap;<br>
+                overflow: hidden;<br>
+                text-overflow: ellipsis;
+            </div>
+        </div>
+        
+        <div class="example-container">
+            <div class="example-title">e. Texto vertical</div>
+            <p class="vertical-text">TEXTO VERTICAL</p>
+            <div class="code">
+                writing-mode: vertical-rl;<br>
+                text-orientation: upright;
+            </div>
+        </div>
+    </section>
+
+    <section id="transiciones">
+        <h2>2. Transiciones</h2>
+        <p>Pasa el cursor sobre los cuadrados para ver las transiciones aplicadas a diferentes propiedades.</p>
+        
+        <div class="example-container">
+            <div class="transition-example">Hover me</div>
+            <div class="transition-example">Hover me</div>
+            <div class="transition-example">Hover me</div>
+            
+            <div class="code">
+                .transition-example {<br>
+                &nbsp;&nbsp;transition: all 0.3s ease;<br>
+                }<br><br>
+                .transition-example:hover {<br>
+                &nbsp;&nbsp;background-color: #e74c3c;<br>
+                &nbsp;&nbsp;border: 5px solid #2c3e50;<br>
+                &nbsp;&nbsp;border-radius: 20px;<br>
+                &nbsp;&nbsp;margin: 15px;<br>
+                &nbsp;&nbsp;opacity: 0.8;<br>
+                &nbsp;&nbsp;word-spacing: 5px;<br>
+                &nbsp;&nbsp;letter-spacing: 2px;<br>
+                &nbsp;&nbsp;padding: 10px;<br>
+                &nbsp;&nbsp;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);<br>
+                &nbsp;&nbsp;box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);<br>
+                &nbsp;&nbsp;line-height: 120px;<br>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section id="transformaciones">
+        <h2>3. Transformaciones</h2>
+        <p>Pasa el cursor sobre los cuadrados para ver las diferentes transformaciones.</p>
+        
+        <div class="transform-container">
+            <div class="transform-box scale">Scale</div>
+            <div class="transform-box translate">Translate</div>
+            <div class="transform-box rotate">Rotate</div>
+            <div class="transform-box skew">Skew</div>
+            <div class="transform-box matrix">Matrix</div>
+        </div>
+        
+        <div class="example-container">
+            <div class="code">
+                /* Scale */<br>
+                transform: scale(1.2);<br><br>
+                /* Translate */<br>
+                transform: translate(20px, 20px);<br><br>
+                /* Rotate */<br>
+                transform: rotate(45deg);<br><br>
+                /* Skew */<br>
+                transform: skew(20deg, 10deg);<br><br>
+                /* Matrix */<br>
+                transform: matrix(1, 0.3, 0.3, 1, 20, 20);
+            </div>
+        </div>
+    </section>
+
+    <section id="pseudo-clases" class="pseudo-classes">
+        <h2>4. Pseudo-Clases</h2>
+        
+        <div class="example-container">
+            <div class="example-title">a. :root</div>
+            <p>La pseudo-clase :root representa el elemento raíz del documento (normalmente el elemento html).</p>
+            <div class="code">
+                :root {<br>
+                &nbsp;&nbsp;--main-color: #3498db;<br>
+                &nbsp;&nbsp;--secondary-color: #2c3e50;<br>
+                }
+            </div>
+        </div>
+        
+        <div class="example-container">
+            <div class="example-title">b. :hover</div>
+            <p>Pasa el cursor sobre los enlaces para ver el efecto hover.</p>
+            <a href="#">Enlace 1</a>
+            <a href="#">Enlace 2</a>
+            <a href="#">Enlace 3</a>
+            <div class="code">
+                a:hover {<br>
+                &nbsp;&nbsp;background-color: #2980b9;<br>
+                }
+            </div>
+        </div>
+        
+        <div class="example-container">
+            <div class="example-title">c. :active</div>
+            <p>Haz clic y mantén presionado los enlaces para ver el efecto active.</p>
+            <a href="#">Enlace 1</a>
+            <a href="#">Enlace 2</a>
+            <a href="#">Enlace 3</a>
+            <div class="code">
+                a:active {<br>
+                &nbsp;&nbsp;background-color: #1c638e;<br>
+                &nbsp;&nbsp;transform: scale(0.95);<br>
+                }
+            </div>
+        </div>
+        
+        <div class="example-container">
+            <div class="example-title">d. :target</div>
+            <p>Haz clic en los enlaces para ver el contenido objetivo.</p>
+            <a href="#target1">Mostrar contenido 1</a>
+            <a href="#target2">Mostrar contenido 2</a>
+            
+            <div id="target1" class="target-content">
+                Este es el contenido objetivo 1. Se muestra cuando el enlace correspondiente es clickeado.
+            </div>
+            
+            <div id="target2" class="target-content">
+                Este es el contenido objetivo 2. Se muestra cuando el enlace correspondiente es clickeado.
+            </div>
+            
+            <div class="code">
+                .target-content {<br>
+                &nbsp;&nbsp;display: none;<br>
+                }<br><br>
+                .target-content:target {<br>
+                &nbsp;&nbsp;display: block;<br>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section id="pseudo-elementos" class="pseudo-elements">
+        <h2>5. Pseudo-Elementos</h2>
+        
+        <div class="example-container">
+            <div class="example-title">a. ::first-line</div>
+            <p class="first-line">Este es un párrafo de ejemplo que demuestra el pseudo-elemento ::first-line. Solo la primera línea de este párrafo tendrá un estilo diferente. El resto del texto se mostrará con el formato normal.</p>
+            <div class="code">
+                .first-line::first-line {<br>
+                &nbsp;&nbsp;font-weight: bold;<br>
+                &nbsp;&nbsp;color: #e74c3c;<br>
+                }
+            </div>
+        </div>
+        
+        <div class="example-container">
+            <div class="example-title">b. ::first-letter</div>
+            <p class="first-letter">Este es un párrafo de ejemplo que demuestra el pseudo-elemento ::first-letter. La primera letra de este párrafo tendrá un estilo diferente al resto del texto.</p>
+            <div class="code">
+                .first-letter::first-letter {<br>
+                &nbsp;&nbsp;font-size: 2em;<br>
+                &nbsp;&nbsp;color: #2c3e50;<br>
+                &nbsp;&nbsp;font-weight: bold;<br>
+                &nbsp;&nbsp;float: left;<br>
+                &nbsp;&nbsp;margin-right: 5px;<br>
+                &nbsp;&nbsp;line-height: 1;<br>
+                }
+            </div>
+        </div>
+        
+        <div class="example-container">
+            <div class="example-title">c. ::before y d. ::after</div>
+            <p class="before-after">Contenido principal</p>
+            <div class="code">
+                .before-after::before {<br>
+                &nbsp;&nbsp;content: "Antes: ";<br>
+                &nbsp;&nbsp;font-weight: bold;<br>
+                &nbsp;&nbsp;color: #2c3e50;<br>
+                }<br><br>
+                .before-after::after {<br>
+                &nbsp;&nbsp;content: " :Después";<br>
+                &nbsp;&nbsp;font-weight: bold;<br>
+                &nbsp;&nbsp;color: #e74c3c;<br>
+                }
+            </div>
+        </div>
+    </section>
+</body>
+</html>
